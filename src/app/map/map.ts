@@ -20,7 +20,7 @@ export class Map implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   async ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) { // Only run in the browser
+    if (isPlatformBrowser(this.platformId)) { 
       await this.loadGoogleMaps();
       this.initMap();
     }
